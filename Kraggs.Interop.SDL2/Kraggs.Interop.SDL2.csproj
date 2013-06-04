@@ -48,6 +48,9 @@
     <Compile Include="Power\apiSDL2_power.cs" />
     <Compile Include="Power\SDL2PowerState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rect\apiSDL2_Rect.cs" />
+    <Compile Include="Rect\SDL2Point.cs" />
+    <Compile Include="Rect\SDL2Rect.cs" />
     <Compile Include="Version\apiSDL2_version.cs" />
     <Compile Include="Version\SDL2Version.cs" />
   </ItemGroup>
