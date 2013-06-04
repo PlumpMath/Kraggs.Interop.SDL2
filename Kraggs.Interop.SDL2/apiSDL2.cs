@@ -11,7 +11,7 @@ namespace Kraggs.Interop.SDL2
     public static partial class apiSDL2
     {
         internal const string SDL2_LIBRARY = "SDL2.dll";
-        internal const CallingConvention SDL2_CALL = CallingConvention.StdCall;
+        internal const CallingConvention SDL2_CALL = CallingConvention.Cdecl;
 
 
 

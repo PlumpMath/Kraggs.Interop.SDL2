@@ -41,6 +41,8 @@
   <ItemGroup>
     <Compile Include="apiSDL2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Version\apiSDL2_version.cs" />
+    <Compile Include="Version\SDL2Version.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
