@@ -40,6 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="apiSDL2.cs" />
+    <Compile Include="Error\apiSDL2_error.cs" />
+    <Compile Include="Error\SDL2ErrorCode.cs" />
     <Compile Include="Platform\apiSDL2_platform.cs" />
     <Compile Include="Power\apiSDL2_power.cs" />
     <Compile Include="Power\SDL2PowerState.cs" />
