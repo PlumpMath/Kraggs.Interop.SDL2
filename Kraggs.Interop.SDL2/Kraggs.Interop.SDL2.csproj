@@ -53,6 +53,7 @@
     <Compile Include="Rect\SDL2Rect.cs" />
     <Compile Include="Version\apiSDL2_version.cs" />
     <Compile Include="Version\SDL2Version.cs" />
+    <Compile Include="Video\apiSDL2_opengl.cs" />
     <Compile Include="Video\apiSDL2_video.cs" />
     <Compile Include="Video\SDL2DisplayMode.cs" />
     <Compile Include="Video\SDL2OpenGLAttributes.cs" />
