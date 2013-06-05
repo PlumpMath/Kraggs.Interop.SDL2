@@ -44,6 +44,9 @@
     <Compile Include="Error\SDL2ErrorCode.cs" />
     <Compile Include="Init\apiSDL2_init.cs" />
     <Compile Include="Init\SDL2SubSystem.cs" />
+    <Compile Include="Mouse\apiSDL2_mouse.cs" />
+    <Compile Include="Mouse\SDL2Button.cs" />
+    <Compile Include="Mouse\SDL2SystemCursorEnum.cs" />
     <Compile Include="Platform\apiSDL2_platform.cs" />
     <Compile Include="Power\apiSDL2_power.cs" />
     <Compile Include="Power\SDL2PowerState.cs" />
