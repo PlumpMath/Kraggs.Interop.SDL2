@@ -33,28 +33,29 @@ using SDL_Surface = System.IntPtr;
 namespace Kraggs.Interop.SDL2
 {
     /// <summary>
-    /// Enumeration of valid key mods (possibly OR'd together).
+    /// The SDL keysym structure, used in key events.
     /// </summary>
-    public enum SDL2KeyMod : ushort
+    [StructLayout(LayoutKind.Sequential)]
+    public struct SDL2KeySym
     {
-        None            = 0x0000,
-        LeftShift       = 0x0001,
-        RightShift      = 0x0002,
-        LeftControl     = 0x0040,
-        RightControl    = 0x0080,
-        Leftalt         = 0x0100,
-        RightAlt        = 0x0200,
-        LeftGui         = 0x0400,
-        RightGui        = 0x0800,
-        Numlock         = 0x1000,
-        Capslock        = 0x2000,
-        Mode            = 0x4000,
-        Reserved        = 0x8000,
+        /// <summary>
+        /// SDL physical key code - see ::SDL_Scancode for details
+        /// </summary>
+        public SDL2ScanCode ScanCode;
+        /// <summary>
+        /// SDL virtual key code - see ::SDL_Keycode for details
+        /// </summary>
+        public SDL2KeyCode Sym;
 
-        Control         = LeftControl | RightControl,
-        Shift           = LeftShift | RightShift,
-        Alt             = Leftalt | RightAlt,
-        Gui             = LeftGui | RightGui,
+        /// <summary>
+        /// current key modifiers
+        /// </summary>
+        public SDL2KeyMod Mod;
 
+        /// <summary>
+        /// deprecated use SDL_TextInputEvent instead
+        /// </summary>
+        [Obsolete("deprecated use SDL_TextInputEvent instead")]
+        public uint Unicode;
     }
 }
