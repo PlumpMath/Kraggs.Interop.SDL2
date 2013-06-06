@@ -50,6 +50,11 @@
     <Compile Include="Events\SDL2EventTypeEnum.cs" />
     <Compile Include="Init\apiSDL2_init.cs" />
     <Compile Include="Init\SDL2SubSystem.cs" />
+    <Compile Include="Keyboard\apiSDL2_keyboard.cs" />
+    <Compile Include="Keyboard\SDL2KeyCode.cs" />
+    <Compile Include="Keyboard\SDL2KeyMod.cs" />
+    <Compile Include="Keyboard\SDL2KeySym.cs" />
+    <Compile Include="Keyboard\SDL2ScanCode.cs" />
     <Compile Include="Mouse\apiSDL2_mouse.cs" />
     <Compile Include="Mouse\SDL2Button.cs" />
     <Compile Include="Mouse\SDL2SystemCursorEnum.cs" />
