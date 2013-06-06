@@ -35,8 +35,8 @@ namespace Kraggs.Interop.SDL2
         /// <summary>
         /// Keyboard event data
         /// </summary>
-        //[FieldOffset(0)]
-        //public SDL2KeyboardEvent Key;
+        [FieldOffset(0)]
+        public SDL2KeyboardEvent Key;
 
         /// <summary>
         /// Text editing event data 
@@ -175,9 +175,9 @@ namespace Kraggs.Interop.SDL2
         private byte Padding2;
         private byte Padding3;
 
-        [Obsolete("Need implementation of SDL_keysym.")]
-        public int KeySym;
-        //public SDL2KeySym KeySym;
+        //[Obsolete("Need implementation of SDL_keysym.")]
+        //public int KeySym;
+        public SDL2KeySym KeySym;
     }
     
 
