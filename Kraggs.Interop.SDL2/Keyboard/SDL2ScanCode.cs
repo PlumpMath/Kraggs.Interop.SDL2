@@ -285,7 +285,7 @@ namespace Kraggs.Interop.SDL2
         /// </summary>
         Alterase                    = 153,
 
-        SysReq                      = 154,
+        SysRq                       = 154,
         Cancel                      = 155,
         Clear                       = 156,
         Prior                       = 157,
@@ -295,11 +295,11 @@ namespace Kraggs.Interop.SDL2
         Oper                        = 161,
         ClearAgain                  = 162,
         CrSel                       = 163,
-        Exsel                       = 164,
+        ExSel                       = 164,
 
         Keypad00                    = 176,
         Keypad000                   = 177,
-        ThousandSeparator           = 178,
+        ThousandsSeparator          = 178,
         DecimalSeparator            = 179,
         CurrencyUnit                = 180,
         CurrencySubUnit             = 181,
