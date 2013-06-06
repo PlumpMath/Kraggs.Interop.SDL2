@@ -22,21 +22,20 @@
 #endregion
 
 using System;
-using System.Collections.Generic;
-//using System.Linq;
-using System.Text;
-//using System.Threading.Tasks;
-
 using System.Runtime.InteropServices;
+using System.Diagnostics;
+
+// mapp to system intptr
+using SDL_Window = System.IntPtr;
+using SDL_GLContext = System.IntPtr;
+using SDL_Surface = System.IntPtr;
 
 namespace Kraggs.Interop.SDL2
 {
-    public static partial class apiSDL2
+    public enum SDL2EventActionEnum
     {
-        internal const string SDL2_LIBRARY = "SDL2.dll";
-        internal const CallingConvention SDL2_CALL = CallingConvention.Cdecl;
-
-
-
+        AddEvent,
+        PeekEvent,
+        GetEvent,
     }
 }

@@ -22,21 +22,40 @@
 #endregion
 
 using System;
-using System.Collections.Generic;
-//using System.Linq;
-using System.Text;
-//using System.Threading.Tasks;
-
 using System.Runtime.InteropServices;
+using System.Diagnostics;
+
+// mapp to system intptr
+using SDL_Window = System.IntPtr;
+using SDL_GLContext = System.IntPtr;
+using SDL_Surface = System.IntPtr;
 
 namespace Kraggs.Interop.SDL2
 {
-    public static partial class apiSDL2
+    /// <summary>
+    /// The SDL keysym structure, used in key events.
+    /// </summary>
+    [StructLayout(LayoutKind.Sequential)]
+    public struct SDL2KeySym
     {
-        internal const string SDL2_LIBRARY = "SDL2.dll";
-        internal const CallingConvention SDL2_CALL = CallingConvention.Cdecl;
+        /// <summary>
+        /// SDL physical key code - see ::SDL_Scancode for details
+        /// </summary>
+        public SDL2ScanCode ScanCode;
+        /// <summary>
+        /// SDL virtual key code - see ::SDL_Keycode for details
+        /// </summary>
+        public SDL2KeyCode Sym;
 
+        /// <summary>
+        /// current key modifiers
+        /// </summary>
+        public SDL2KeyMod Mod;
 
-
+        /// <summary>
+        /// deprecated use SDL_TextInputEvent instead
+        /// </summary>
+        [Obsolete("deprecated use SDL_TextInputEvent instead")]
+        public uint Unicode;
     }
 }

@@ -22,21 +22,22 @@
 #endregion
 
 using System;
-using System.Collections.Generic;
-//using System.Linq;
-using System.Text;
-//using System.Threading.Tasks;
-
 using System.Runtime.InteropServices;
+using System.Diagnostics;
 
 namespace Kraggs.Interop.SDL2
 {
-    public static partial class apiSDL2
+    public enum SDL2SubSystem
     {
-        internal const string SDL2_LIBRARY = "SDL2.dll";
-        internal const CallingConvention SDL2_CALL = CallingConvention.Cdecl;
-
-
+		Timer               = 0x00000001,
+		Audio               = 0x00000010,
+		Video               = 0x00000020,
+		Joystick            = 0x00000200,
+		Haptic              = 0x00001000,
+		GameController      = 0x00002000,
+		NoParachute         = 0x00100000,
+		//INIT_EVERYTHING = (INIT_TIMER | INIT_AUDIO | INIT_VIDEO | INIT_JOYSTICK | INIT_HAPTIC | INIT_GAMECONTROLLER | INIT_NOPARACHUTE),
+        Everything = Timer | Audio | Video | Joystick | Haptic | GameController,
 
     }
 }

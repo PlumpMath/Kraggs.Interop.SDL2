@@ -22,21 +22,39 @@
 #endregion
 
 using System;
-using System.Collections.Generic;
-//using System.Linq;
-using System.Text;
-//using System.Threading.Tasks;
-
 using System.Runtime.InteropServices;
+using System.Diagnostics;
+
+// mapp to system intptr
+using SDL_Window = System.IntPtr;
+using SDL_GLContext = System.IntPtr;
+using SDL_Surface = System.IntPtr;
 
 namespace Kraggs.Interop.SDL2
 {
-    public static partial class apiSDL2
+    /// <summary>
+    /// Enumeration of valid key mods (possibly OR'd together).
+    /// </summary>
+    public enum SDL2KeyMod : ushort
     {
-        internal const string SDL2_LIBRARY = "SDL2.dll";
-        internal const CallingConvention SDL2_CALL = CallingConvention.Cdecl;
+        None            = 0x0000,
+        LeftShift       = 0x0001,
+        RightShift      = 0x0002,
+        LeftControl     = 0x0040,
+        RightControl    = 0x0080,
+        Leftalt         = 0x0100,
+        RightAlt        = 0x0200,
+        LeftGui         = 0x0400,
+        RightGui        = 0x0800,
+        Numlock         = 0x1000,
+        Capslock        = 0x2000,
+        Mode            = 0x4000,
+        Reserved        = 0x8000,
 
-
+        Control         = LeftControl | RightControl,
+        Shift           = LeftShift | RightShift,
+        Alt             = Leftalt | RightAlt,
+        Gui             = LeftGui | RightGui,
 
     }
 }

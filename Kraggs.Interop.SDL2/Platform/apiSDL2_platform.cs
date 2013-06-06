@@ -22,21 +22,34 @@
 #endregion
 
 using System;
-using System.Collections.Generic;
-//using System.Linq;
-using System.Text;
-//using System.Threading.Tasks;
-
 using System.Runtime.InteropServices;
+using System.Diagnostics;
+
+// mapp to system intptr
+using SDL_Window = System.IntPtr;
+using SDL_GLContext = System.IntPtr;
+using SDL_Surface = System.IntPtr;
 
 namespace Kraggs.Interop.SDL2
 {
-    public static partial class apiSDL2
+    partial class apiSDL2
     {
-        internal const string SDL2_LIBRARY = "SDL2.dll";
-        internal const CallingConvention SDL2_CALL = CallingConvention.Cdecl;
+        /// <summary>
+        /// Gets the name of the platform.
+        /// </summary>
+        /// <returns></returns>
+        [DllImport(SDL2_LIBRARY, EntryPoint = "SDL_GetPlatform", CallingConvention = SDL2_CALL)]
+        private static extern IntPtr GetPlatformPtr();
 
-
+        /// <summary>
+        /// Gets the name of the platform.
+        /// </summary>
+        /// <returns></returns>
+        [DebuggerNonUserCode()]
+        public static string GetPlatform()
+        {
+            return Marshal.PtrToStringAnsi(GetPlatformPtr());
+        }
 
     }
 }

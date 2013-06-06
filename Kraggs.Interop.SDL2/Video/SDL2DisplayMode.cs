@@ -22,21 +22,41 @@
 #endregion
 
 using System;
-using System.Collections.Generic;
-//using System.Linq;
-using System.Text;
-//using System.Threading.Tasks;
-
 using System.Runtime.InteropServices;
+using System.Diagnostics;
+
+// mapp to system intptr
+using SDL_Window = System.IntPtr;
+using SDL_GLContext = System.IntPtr;
+using SDL_Surface = System.IntPtr;
 
 namespace Kraggs.Interop.SDL2
 {
-    public static partial class apiSDL2
+    /// <summary>
+    /// The structure that defines a display mode
+    /// </summary>
+    [StructLayout(LayoutKind.Sequential)]
+    public struct SDL2DisplayMode
     {
-        internal const string SDL2_LIBRARY = "SDL2.dll";
-        internal const CallingConvention SDL2_CALL = CallingConvention.Cdecl;
-
-
-
+        /// <summary>
+        /// pixel format
+        /// </summary>
+        public uint PixelFormat;
+        /// <summary>
+        /// width
+        /// </summary>
+        public int Width;
+        /// <summary>
+        /// height
+        /// </summary>
+        public int Height;
+        /// <summary>
+        /// refresh rate (or zero for unspecified)
+        /// </summary>
+        public int RefreshRate;
+        /// <summary>
+        /// driver-specific data, initialize to 0
+        /// </summary>
+        private IntPtr DriverData;
     }
 }

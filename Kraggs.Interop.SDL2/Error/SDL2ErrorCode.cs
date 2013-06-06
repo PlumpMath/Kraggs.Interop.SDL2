@@ -21,22 +21,30 @@
 */
 #endregion
 
+
 using System;
 using System.Collections.Generic;
-//using System.Linq;
+using System.Linq;
 using System.Text;
-//using System.Threading.Tasks;
-
-using System.Runtime.InteropServices;
+using System.Threading.Tasks;
 
 namespace Kraggs.Interop.SDL2
 {
-    public static partial class apiSDL2
+    /*
+    internal enum SDL2ErrorCode
     {
-        internal const string SDL2_LIBRARY = "SDL2.dll";
-        internal const CallingConvention SDL2_CALL = CallingConvention.Cdecl;
-
-
-
+        //SDL_ENOMEM,
+        NotEnoughMemoryError,
+        //SDL_EFREAD,
+        FileReadError,        
+        //SDL_EFWRITE,
+        FileWriteError,
+        //SDL_EFSEEK,
+        FileSeekError,
+        //SDL_UNSUPPORTED,
+        NotSupportedError,
+        //SDL_LASTERROR
+        LastError
     }
+     * */
 }
